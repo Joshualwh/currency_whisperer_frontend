@@ -1,13 +1,29 @@
 import { Fragment } from "react";
+import { Outlet, Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div>
-      <h1>Navigation</h1>
-      <h2>All Currency</h2>
-      <h2>Subscribed Currency</h2>
-      <h2>Money Changer Near Me</h2>
-    </div>
+    <Fragment>
+      <div>
+        <div>
+          <Link to='/'>
+            <h1>Currency Whisperer</h1>
+          </Link>
+          <label>
+            Subscription
+            <select name="" id="">
+              <option value="">All</option>
+              <option value="">Subscribed</option>
+            </select>
+          </label>
+          <h2>Money Changer</h2>
+        </div>
+        <div>
+          <h2>User Profile</h2>
+        </div>
+      </div>
+      <Outlet />
+    </Fragment>
   )
 }
 
