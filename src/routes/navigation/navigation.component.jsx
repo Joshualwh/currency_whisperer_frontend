@@ -27,8 +27,8 @@ const Navigation = () => {
             {isDropdownVisible && (
               <div>
                 <ul>
-                  <li>All</li>
-                  <li>Subscribed</li>
+                  <Link className="nav-component-link" to='/'><li>All</li></Link>
+                  <Link className="nav-component-link" to='/subscription'><li>Subscribed</li></Link>
                 </ul>
               </div>
             )}
@@ -36,7 +36,9 @@ const Navigation = () => {
           <div className="nav-component"><h3>Money Changer</h3></div>
         </div>
         <div className="nav-bar-right">
-          <div className="nav-component"><h3>User Profile</h3></div>
+          <div className="nav-component">
+            <Link className="nav-component-link" to='/authentication'><h3>User Profile</h3></Link>
+          </div>
         </div>
       </span>
       <Outlet />
