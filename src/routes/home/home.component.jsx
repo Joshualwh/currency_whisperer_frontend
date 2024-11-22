@@ -1,3 +1,8 @@
+import { useContext } from "react";
+import { CurrencyContext } from "../../contexts/currency.context";
+
+import CurrencyCard from "../../components/currency-card/currency-card.component";
+
 const Home = () => {
   return (
     <div>
@@ -9,6 +14,7 @@ const Home = () => {
         <span>Currency 2</span>
       </div>
       {/* Create a card component, import the .json file */}
+      <CurrencyCard />
     </div>
   )
 }
