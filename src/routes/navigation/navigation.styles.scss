@@ -62,11 +62,36 @@
 
     .nav-component {
       margin: 15px;
+      position: relative; 
       cursor: pointer;
 
-      .nav-component-link {
-        text-decoration: none;
+      ul {
+        list-style: none;
+        padding: unset;
+        margin: unset;
+        position: absolute;
+        left: 0; 
+        top: 100%;
+        width: 100%;  
+
+        .nav-component-link {
+          text-decoration: none;
+        }
+      }
+      
+      li {
+        padding: 15px;
+        transition: all linear 0.3s;
+        background-color: white;
         color: black;
+        font-weight: bold;
+      }
+      
+      li:hover {
+        background: black;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
       }
     }
   }

@@ -1,13 +1,13 @@
 import { createContext, useState } from "react";
 import CURRENCY from "../currency.json";
 
-export const CurrencyContext = createContext({
-  products: [],
+export const CurrenciesContext = createContext({
+  currencies: [],
 })
 
 export const CurrencyProvider = ({children}) => {
-  const [currency, setCurrency] = useState(CURRENCY);
-  const value = { currency };
+  const [currencies, setCurrencies] = useState(CURRENCY);
+  const value = { currencies };
 
-  return <CurrencyContext.Provider value={value}>{children}</CurrencyContext.Provider>
+  return <CurrenciesContext.Provider value={value}>{children}</CurrenciesContext.Provider>
 }
